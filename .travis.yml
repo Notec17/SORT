@@ -38,6 +38,9 @@ matrix:
     - os: windows
       script:
        - ./build_win.ps1
+       - cd dependencies
+       - dir
+       - cd ..
        - mkdir _out
        - cd _out
        - cmake -DCMAKE_GENERATOR_PLATFORM=x64 ..
