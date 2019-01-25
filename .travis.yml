@@ -39,5 +39,5 @@ matrix:
        - ./build_win.ps1
        - mkdir proj_release && cd proj_release
        - cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_GENERATOR_PLATFORM=x64 -G "${CMAKE_GENERATOR}" .. && MSBuild.exe SORT.sln
-       - cd .. && mkdir proj_release && cd proj_release
+       - cd .. && mkdir proj_debug && cd proj_debug
        - cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_GENERATOR_PLATFORM=x64 -G "${CMAKE_GENERATOR}" .. && MSBuild.exe SORT.sln
