@@ -41,4 +41,5 @@ matrix:
        - mkdir proj_release
        - cd proj_release
        - cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_GENERATOR_PLATFORM=x64 ..
+       - dir
        - msbuild SORT.sln
