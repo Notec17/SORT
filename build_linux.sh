@@ -9,7 +9,7 @@ wget http://45.63.123.194/sort_dependencies/linux/easy_profiler.zip
 unzip easy_profiler.zip
 rm easy_profiler.zip
 cd ..
-dir
+ls
 mkdir _out
 cd _out
 cmake -DCMAKE_CXX_COMPILER=$CXX_COMPILER -DCMAKE_C_COMPILER=$C_COMPILER .. && make
