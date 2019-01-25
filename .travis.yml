@@ -38,9 +38,7 @@ matrix:
     - os: windows
       script:
        - ./build_win.ps1
-       - cd dependencies
-       - dir
-       - cd ..
-       - mkdir _out
-       - cd _out
-       - cmake -DCMAKE_GENERATOR_PLATFORM=x64 ..
+       - mkdir proj_release
+       - cd proj_release
+       - cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_GENERATOR_PLATFORM=x64 ..
+       - msbuild SORT.sln
