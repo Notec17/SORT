@@ -62,8 +62,4 @@ matrix:
        - mkdir proj_release
        - cd proj_release
        - cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_GENERATOR_PLATFORM=x64 -G "${CMAKE_GENERATOR}" ..
-       - echo %PATH%
-       - dir
-       - cd "c:/Program Files (x86)/Microsoft Visual Studio/2017/BuildTools/MSBuild/15.0/Bin"
-       - dir
-       - msbuild SORT.sln
+       - MSBuild.exe SORT.sln
