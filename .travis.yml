@@ -37,9 +37,7 @@ matrix:
         - cmake -DCMAKE_BUILD_TYPE=Debug DCMAKE_CXX_COMPILER=$CXX_COMPILER -DCMAKE_C_COMPILER=$C_COMPILER .. && make -j4
     - os: windows
       script:
-       - mkdir dependencies
-       - wget http://45.63.123.194/sort_dependencies/win/easy_profiler.zip -O easy_profiler.zip
-       - Expand-Archive .\easy_profiler.zip -DestinationPath .\dependencies\
+       - ./build_win.ps1
        - mkdir _out
        - cd _out
        - cmake -DCMAKE_GENERATOR_PLATFORM=x64 ..

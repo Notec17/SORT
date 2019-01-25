@@ -1,6 +1,12 @@
 mkdir dependencies
 wget http://45.63.123.194/sort_dependencies/win/easy_profiler.zip -O easy_profiler.zip
-Expand-Archive .\easy_profiler.zip -DestinationPath .\dependencies\
-mkdir _out
-cd _out
-cmake -DCMAKE_GENERATOR_PLATFORM=x64 ..
+
+Add-Type -AssemblyName System.IO.Compression.FileSystem
+function Unzip
+{
+    param([string]$zipfile, [string]$outpath)
+
+    [System.IO.Compression.ZipFile]::ExtractToDirectory($zipfile, $outpath)
+}
+
+Unzip ".\easy_profiler.zip" ".\dependencies\"
