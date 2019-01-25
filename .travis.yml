@@ -7,6 +7,7 @@ matrix:
       compiler: clang
       script:
        - sudo /bin/sh ./build_mac.sh
+       - cmake -DCMAKE_CXX_COMPILER=$CXX_COMPILER -DCMAKE_C_COMPILER=$C_COMPILER .. && make
     - os: linux
       compiler: gcc
       env:
@@ -24,3 +25,4 @@ matrix:
     - os: windows
       script:
        - ./build_win.ps1
+       - cmake -DCMAKE_CXX_COMPILER=$CXX_COMPILER -DCMAKE_C_COMPILER=$C_COMPILER .. && make

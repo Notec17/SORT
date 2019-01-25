@@ -12,7 +12,6 @@ cd ..
 ls
 mkdir _out
 cd _out
-cmake -DCMAKE_CXX_COMPILER=$CXX_COMPILER -DCMAKE_C_COMPILER=$C_COMPILER .. && make
 ;;
 
 *)
