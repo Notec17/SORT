@@ -9,8 +9,14 @@ unzip easy_profiler.zip
 rm -rf __MACOSX
 rm easy_profiler.zip
 cd ..
-ls
 ;;
+
+CYGWIN*|MINGW32*|MSYS*)
+echo 'MS Windows'
+;;
+
+# Add here more strings to compare
+# See correspondence table at the bottom of this answer
 
 *)
 echo 'other OS'
