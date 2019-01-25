@@ -36,6 +36,9 @@ matrix:
         - cd proj_debug
         - cmake -DCMAKE_BUILD_TYPE=Debug DCMAKE_CXX_COMPILER=$CXX_COMPILER -DCMAKE_C_COMPILER=$C_COMPILER .. && make -j4
     - os: windows
+      before_install:
+       - chmod a+x "$TRAVIS_MSBUILD_BIN"/msbuild-prepare
+       - msbuild-prepare
       script:
        - ./build_win.ps1
        - mkdir proj_release
