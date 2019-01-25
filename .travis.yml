@@ -7,6 +7,8 @@ matrix:
       compiler: clang
       script:
        - sudo /bin/sh ./build_mac.sh
+       - mkdir _out
+       - cd _out
        - cmake -DCMAKE_CXX_COMPILER=$CXX_COMPILER -DCMAKE_C_COMPILER=$C_COMPILER .. && make
     - os: linux
       compiler: gcc
@@ -21,7 +23,10 @@ matrix:
       before_install:
         - eval "${MATRIX_EVAL}" 
       script:
-       - sudo /bin/sh ./getdep_linux.sh
+        - sudo /bin/sh ./build_linux.sh
+        - mkdir _out
+        - cd _out
+        - cmake -DCMAKE_CXX_COMPILER=$CXX_COMPILER -DCMAKE_C_COMPILER=$C_COMPILER .. && make
     - os: windows
       script:
        - ./build_win.ps1

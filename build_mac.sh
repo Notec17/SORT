@@ -10,8 +10,6 @@ rm -rf __MACOSX
 rm easy_profiler.zip
 cd ..
 ls
-mkdir _out
-cd _out
 ;;
 
 *)

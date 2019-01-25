@@ -10,8 +10,6 @@ unzip easy_profiler.zip
 rm easy_profiler.zip
 cd ..
 ls
-mkdir _out
-cd _out
 ;;
 
 *)
