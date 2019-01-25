@@ -22,6 +22,7 @@
 #include "core/profile.h"
 #include "core/path.h"
 
+
 #ifdef SORT_IN_WINDOWS
 int __cdecl main( int argc , char** argv )
 #elif defined(SORT_IN_LINUX) || defined(SORT_IN_MAC)
