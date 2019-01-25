@@ -6,10 +6,7 @@ matrix:
     - os: osx
       compiler: clang
       script:
-       - sudo /bin/sh ./getdep_linux.sh
-       - mkdir _out
-       - cd _out
-       - cmake -DCMAKE_CXX_COMPILER=$CXX_COMPILER -DCMAKE_C_COMPILER=$C_COMPILER .. && make
+       - sudo /bin/sh ./build_mac.sh
     - os: linux
       compiler: gcc
       env:
@@ -24,9 +21,6 @@ matrix:
         - eval "${MATRIX_EVAL}" 
       script:
        - sudo /bin/sh ./getdep_linux.sh
-       - mkdir _out
-       - cd _out
-       - cmake -DCMAKE_CXX_COMPILER=$CXX_COMPILER -DCMAKE_C_COMPILER=$C_COMPILER .. && make
     - os: windows
       script:
-       - ./getdep_win.ps1
+       - ./build_win.ps1
