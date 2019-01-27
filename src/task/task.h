@@ -20,7 +20,6 @@
 #include <unordered_set>
 #include <unordered_map>
 #include <queue>
-#include <memory>
 #include <mutex>
 #include <functional>
 #include <condition_variable>

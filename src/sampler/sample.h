@@ -17,7 +17,6 @@
 
 #pragma once
 
-#include <memory>
 #include <vector>
 #include "core/define.h"
 #include "core/rand.h"
