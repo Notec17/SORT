@@ -18,7 +18,6 @@
 #pragma once
 
 #include <list>
-#include <memory>
 #include "math/transform.h"
 #include "stream/stream.h"
 #include "core/rtti.h"

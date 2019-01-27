@@ -43,4 +43,3 @@ matrix:
         - cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_GENERATOR_PLATFORM=x64 -G "${CMAKE_GENERATOR}" .. && MSBuild.exe SORT.sln /property:Configuration=Release -maxcpucount
         - cd .. && mkdir proj_debug && cd proj_debug
         - cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_GENERATOR_PLATFORM=x64 -G "${CMAKE_GENERATOR}" .. && MSBuild.exe SORT.sln /property:Configuration=Debug -maxcpucount
-        - cd ../bin && ./sort_r.exe --unittest

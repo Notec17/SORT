@@ -17,7 +17,6 @@
 
 #pragma once
 
-#include <memory>
 #include "core/log.h"
 #include "math/transform.h"
 #include "math/bbox.h"
